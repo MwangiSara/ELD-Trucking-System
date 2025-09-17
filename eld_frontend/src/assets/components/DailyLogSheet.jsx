@@ -26,7 +26,7 @@ function DailyLogSheet({ tripId }) {
   const loadDailyLogs = async () => {
     try {
       const data = await api.get(`/api/trips/${tripId}/logs/`)
-      setLogs(data)
+      setLogs(data.results || data)
       if (data.length > 0) {
         setSelectedLog(data[0])
         loadDutyEvents(data[0].id)
