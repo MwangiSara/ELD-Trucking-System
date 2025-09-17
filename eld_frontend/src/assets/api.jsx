@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:8000'
+const API_BASE = 'https://eld-trucking-system.onrender.com'
 
 const api = {
   get: async (endpoint) => {
